@@ -73,7 +73,7 @@ public class List<T> {
 		return removeItem;
 	}
 	
-	private boolean isEmpty() {
+	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return firstNode == null;
 	}
@@ -84,7 +84,7 @@ public class List<T> {
 			return;
 		}
 		
-		System.out.printf("The %s is:", name);
+		System.out.printf("The %s is: ", name);
 		ListNode<T> current = firstNode;
 		
 		while(current != null){
@@ -93,5 +93,29 @@ public class List<T> {
 		}
 		
 		System.out.println();
+	}
+
+	public ListNode<T> getFirstNode() {
+		return firstNode;
+	}
+
+	public void setFirstNode(ListNode<T> firstNode) {
+		this.firstNode = firstNode;
+	}
+
+	public ListNode<T> getLastNode() {
+		return lastNode;
+	}
+
+	public void setLastNode(ListNode<T> lastNode) {
+		this.lastNode = lastNode;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }
