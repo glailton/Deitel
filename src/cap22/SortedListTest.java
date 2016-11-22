@@ -9,8 +9,11 @@ public class SortedListTest {
 		sorterList.insert(30);
 		sorterList.insert(10);
 		sorterList.insert(50);
+		sorterList.insert(60);
+		sorterList.insert(80);
+		sorterList.insert(90);
 		
-		
+		System.err.println(sorterList.size());
 		sorterList.orderList();
 		sorterList.print();
 	}

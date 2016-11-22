@@ -19,23 +19,38 @@ public class SortedList{
 		list.print();
 	}
 	
+	public int size(){
+		ListNode<Integer> current = list.getFirstNode();
+		int n = 0;
+		while(current != null){
+			current = current.nextNode;
+			n++;
+		}
+		return n;
+	}
+	
 	public void orderList(){
 		
-		ListNode<Integer> current = list.getFirstNode();
 		
-		while(current != null){
-			if((current != null) && (current.nextNode != null) && ((int) current.data > (int) current.nextNode.data)){
-				Integer aux = current.nextNode.data;
-				current.nextNode.data = current.data;
-				current.data = aux;
-			}else{
-				if(current.nextNode != null)
-					current = current.nextNode;
-				else{
-					return;//current = list.getFirstNode();
+		
+		for(int i = 0; i <= size(); i++){
+			ListNode<Integer> current = list.getFirstNode();
+			while(current != null){
+				if((current != null) && (current.nextNode != null) && ((int) current.data > (int) current.nextNode.data)){
+					Integer aux = current.nextNode.data;
+					current.nextNode.data = current.data;
+					current.data = aux;
+				}else{
+					if(current.nextNode != null)
+						current = current.nextNode;
+					else{
+						//current = list.getFirstNode();
+						break;
+					}
 				}
 			}
 		}
+		
 	}
 
 	
