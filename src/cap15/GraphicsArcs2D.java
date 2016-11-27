@@ -9,8 +9,8 @@ import java.awt.Shape;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.sun.javafx.geom.Arc2D;
-import com.sun.javafx.geom.Ellipse2D;
+/*import com.sun.javafx.geom.Arc2D;
+import com.sun.javafx.geom.Ellipse2D;*/
 
 public class GraphicsArcs2D extends JPanel{
 	
@@ -22,7 +22,7 @@ public class GraphicsArcs2D extends JPanel{
 		for (int i = 0; i < 9; i++) {
 			g2d.setPaint(Color.BLUE);
 		//	g2d.setStroke(new BasicStroke(6.0f));
-			g2d.draw((Shape) new Ellipse2D(i+10, 35, 80, 80) );
+//			g2d.draw((Shape) new Ellipse2D(i+10, 35, 80, 80) );
 			
 		}
 	}
